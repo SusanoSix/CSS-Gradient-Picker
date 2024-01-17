@@ -17,9 +17,19 @@ function setGradient() {
     css.textContent = body.style.background + ",";
 }
 
+function defaultGradient() {
+    body.style.background = 
+    "linear-gradient(to right, " 
+    + color1.value 
+    + ", " 
+    + color2.value 
+    + ")";
+
+    //ADD TEXT CONTENT TO RETURN COLOR VALUES   
+    css.textContent = body.style.background + ",";
+}
+
+document.addEventListener("DOMContentLoaded", setGradient());
+
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
-
-
-
-
